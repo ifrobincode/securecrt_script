@@ -1,0 +1,17 @@
+hostname ${hostname}
+!
+ntp server ${ntp_server}
+!
+interface GigabitEthernet0/0
+ ip address ${hostip} ${mask}
+ no shutdown
+!
+interface Loopback0
+ ip address ${loopback} 255.255.255.255
+!
+snmp-server community ${snmp_community} ro
+!
+line vty 0 4
+ login local
+ transport input ssh
+!
