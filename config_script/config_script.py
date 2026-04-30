@@ -86,19 +86,19 @@ if confirm != 1:
     exit()
 
 # ====== 判断设备品牌 ======
-# 要求 Excel 中有一列：MANUFACTURER（cisco / h3c）
-manufacturer = str(device_data.get("MANUFACTURER", "")).lower()
+# 要求 Excel 中有一列：DEVICE_TYPE（cisco / h3c）
+device_type = str(device_data.get("DEVICE_TYPE", "")).lower()
 
-if manufacturer == "cisco":
+if device_type == "cisco":
     enter_cmd = "configure terminal"
     exit_cmd = "end"
     prompt = "#"
-elif manufacturer == "h3c":
+elif device_type == "h3c":
     enter_cmd = "system-view"
     exit_cmd = "return"
     prompt = "]"
 else:
-    crt.Dialog.MessageBox("不支持的设备类型: {}".format(manufacturer))
+    crt.Dialog.MessageBox("不支持的设备类型: {}".format(device_type))
     exit()
 
 # ====== 开始下发 ======
