@@ -15,6 +15,7 @@
 1. 将所有需要配置的内容保存在 config_template.txt 文件中。
 2. 将每台设备配置不相同的部分用变量形式填写，比如：${hostname}。相同配置保留即可。
 3. 每台设备不相同的配置内容保存在 devices_vars.xlsx 文件中。每一行是一台设备的配置内容。每一列是相同变量的配置内容。
+   - 如果有多个接口需要配置 IP 地址，则需要为变量添加前缀或后缀加以区分，比如：${g0/1_ip}、${g0/2_ip}。
 4. 比如 hostname 列，它就是替换 config_template.txt 文件中的 ${hostname} 变量。根据不同设备，填写不同的内容。
 5. 注意：devices_vars.xlsx 文件中的前两列，DEVICE_NAME 和 DEVICE_TYPE 列，是必须的。
 6. DEVICE_NAME 是预定义的设备名称，在脚本执行时，会根据用户输入的 DEVICE_NAME 匹配将要配置的变量内容。
