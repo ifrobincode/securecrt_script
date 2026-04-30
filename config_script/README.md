@@ -34,6 +34,6 @@
 
 # 更新日志
 
-详见 [UPDATE.md](https://github.com/ifrobincode/securecrt_script/blob/master/UPDATE.md)。
+详见 [UPDATE.md](https://github.com/ifrobincode/securecrt_script/blob/master/config_script/UPDATE.md)。
 
 
